@@ -1,0 +1,60 @@
+comment "Exported from Arsenal by Nichols";
+
+comment "Remove existing items";
+removeAllWeapons _this;
+removeAllItems _this;
+removeAllAssignedItems _this;
+removeUniform _this;
+removeVest _this;
+removeBackpack _this;
+removeHeadgear _this;
+removeGoggles _this;
+
+comment "Add containers";
+_this forceAddUniform "PLA_CombatUniform_SBCB";
+_this addItemToUniform "ACE_EarPlugs";
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_morphine";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_elasticBandage";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_quikclot";};
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_epinephrine";};
+for "_i" from 1 to 10 do {_this addItemToUniform "ACE_packingBandage";};
+_this addItemToUniform "ACE_MapTools";
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_tourniquet";};
+_this addItemToUniform "SmokeShell";
+_this addVest "PLA_B04_RF";
+for "_i" from 1 to 2 do {_this addItemToVest "VME_QBZ95_1_30Rnd_DBP10";};
+for "_i" from 1 to 2 do {_this addItemToVest "VME_QBZ95_1_30Rnd_DBP10_Tracer_Green";};
+for "_i" from 1 to 2 do {_this addItemToVest "SmokeShell";};
+for "_i" from 1 to 2 do {_this addItemToVest "HandGrenade";};
+for "_i" from 1 to 2 do {_this addItemToVest "VME_QBZ95_1_30Rnd_DBP87";};
+_this addItemToVest "VME_QBZ95_1_30Rnd_DBP10_Tracer_Red";
+for "_i" from 1 to 2 do {_this addItemToVest "ACE_Chemlight_HiRed";};
+for "_i" from 1 to 2 do {_this addItemToVest "ACE_Chemlight_HiYellow";};
+for "_i" from 1 to 3 do {_this addItemToVest "VME_QSZ92_20Rnd_DAP92";};
+_this addBackpack "PLA_AssaultPack_AAT";
+_this addItemToBackpack "vme_pla_PF98_AT_Rocket";
+_this addItemToBackpack "vme_pla_PF98_MP_Rocket";
+_this addHeadgear "VME_PLA_Helmet_R_O";
+_this addGoggles "PLA_goggle";
+
+comment "Add weapons";
+_this addWeapon "vme_pla_qbz95_1";
+_this addPrimaryWeaponItem "VME_QBZ95_laser_IR_flashlight";
+_this addPrimaryWeaponItem "VME_Eotech553";
+_this addPrimaryWeaponItem "VME_rail_scopes";
+_this addWeapon "vme_pla_PF98";
+_this addSecondaryWeaponItem "VME_PF98_Scope_FCS";
+_this addWeapon "vme_pla_qsz92";
+
+comment "Add items";
+_this linkItem "ItemMap";
+_this linkItem "ItemCompass";
+_this linkItem "ItemWatch";
+_this linkItem "TFAR_anprc148jem";
+_this linkItem "ItemGPS";
+_this linkItem "NVGoggles_OPFOR";
+
+comment "Set identity";
+_this setFace "AsianHead_A3_01";
+_this setSpeaker "male02chi";

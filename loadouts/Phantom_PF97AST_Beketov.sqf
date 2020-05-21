@@ -1,0 +1,62 @@
+comment "Exported from Arsenal by Nichols";
+
+comment "Remove existing items";
+removeAllWeapons _this;
+removeAllItems _this;
+removeAllAssignedItems _this;
+removeUniform _this;
+removeVest _this;
+removeBackpack _this;
+removeHeadgear _this;
+removeGoggles _this;
+
+comment "Add containers";
+_this forceAddUniform "PLA_CombatUniform_SBCB";
+_this addItemToUniform "ACE_EarPlugs";
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_elasticBandage";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_quikclot";};
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_epinephrine";};
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_morphine";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_packingBandage";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_tourniquet";};
+_this addItemToUniform "ACE_MapTools";
+_this addItemToUniform "ACE_Flashlight_KSF1";
+_this addItemToUniform "ACE_DefusalKit";
+_this addItemToUniform "SmokeShell";
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_Chemlight_IR";};
+_this addVest "PLA_B04_RF";
+_this addItemToVest "ACE_DeadManSwitch";
+_this addItemToVest "ACE_M26_Clacker";
+_this addItemToVest "ACE_Clacker";
+_this addItemToVest "ACE_IR_Strobe_Item";
+for "_i" from 1 to 6 do {_this addItemToVest "VME_QBZ95_1_30Rnd_DBP10";};
+for "_i" from 1 to 2 do {_this addItemToVest "VME_QBZ95_1_30Rnd_DBP10_Tracer_Green";};
+for "_i" from 1 to 2 do {_this addItemToVest "SmokeShell";};
+for "_i" from 1 to 2 do {_this addItemToVest "HandGrenade";};
+_this addBackpack "PLA_AssaultPack_Base";
+_this addItemToBackpack "ACE_wirecutter";
+_this addItemToBackpack "ACE_EntrenchingTool";
+_this addItemToBackpack "vme_camonet_FOR";
+for "_i" from 1 to 6 do {_this addItemToBackpack "vme_pla_PF89A_AST_Rocket";};
+for "_i" from 1 to 3 do {_this addItemToBackpack "DemoCharge_Remote_Mag";};
+_this addItemToBackpack "SatchelCharge_Remote_Mag";
+_this addHeadgear "VME_PLA_Helmet_R_O";
+_this addGoggles "PLA_goggle";
+
+comment "Add weapons";
+_this addWeapon "vme_pla_qbz95_1";
+_this addWeapon "vme_pla_PF89A_AST";
+_this addWeapon "Rangefinder";
+
+comment "Add items";
+_this linkItem "ItemMap";
+_this linkItem "ItemCompass";
+_this linkItem "ItemWatch";
+_this linkItem "TFAR_anprc148jem";
+_this linkItem "ItemGPS";
+_this linkItem "NVGoggles_OPFOR";
+
+comment "Set identity";
+_this setFace "AsianHead_A3_07";
+_this setSpeaker "male01chi";

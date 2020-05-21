@@ -1,0 +1,64 @@
+comment "Exported from Arsenal by Nichols";
+
+comment "Remove existing items";
+removeAllWeapons _this;
+removeAllItems _this;
+removeAllAssignedItems _this;
+removeUniform _this;
+removeVest _this;
+removeBackpack _this;
+removeHeadgear _this;
+removeGoggles _this;
+
+comment "Add containers";
+_this forceAddUniform "PLA_CombatUniform_SGCB";
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_morphine";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_elasticBandage";};
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_quikclot";};
+_this addItemToUniform "ACE_EarPlugs";
+_this addItemToUniform "ACE_epinephrine";
+_this addItemToUniform "ACE_Flashlight_KSF1";
+_this addItemToUniform "ACE_MapTools";
+for "_i" from 1 to 4 do {_this addItemToUniform "ACE_packingBandage";};
+_this addItemToUniform "ACE_EntrenchingTool";
+_this addItemToUniform "SmokeShell";
+_this addVest "PLA_T15Vest_RD";
+for "_i" from 1 to 2 do {_this addItemToVest "VME_QSW06_20Rnd_DCV05";};
+_this addItemToVest "SmokeShellGreen";
+for "_i" from 1 to 2 do {_this addItemToVest "Chemlight_green";};
+for "_i" from 1 to 2 do {_this addItemToVest "HandGrenade";};
+for "_i" from 1 to 10 do {_this addItemToVest "VME_1Rnd_HE_GL";};
+for "_i" from 1 to 6 do {_this addItemToVest "VME_QBZ95_1_30Rnd_DBP10";};
+_this addItemToVest "VME_QBZ95_1_30Rnd_DBP10_Tracer_Green";
+_this addBackpack "PLA_AssaultPack_Base";
+_this addItemToBackpack "VME_QBZ95_1_Silencer";
+_this addItemToBackpack "VME_95_1_PNV";
+for "_i" from 1 to 7 do {_this addItemToBackpack "VME_1Rnd_Smoke_GL";};
+for "_i" from 1 to 14 do {_this addItemToBackpack "VME_1Rnd_HE_GL";};
+for "_i" from 1 to 3 do {_this addItemToBackpack "VME_QBZ95_1_30Rnd_DBP10";};
+_this addItemToBackpack "VME_QBZ95_1_30Rnd_DBP10_Tracer_Green";
+_this addHeadgear "VME_PLA_Helmet_R_O";
+_this addGoggles "PLA_goggle";
+
+comment "Add weapons";
+_this addWeapon "vme_pla_qbz95_1GL";
+_this addPrimaryWeaponItem "VME_QBZ95_1_Silencer";
+_this addPrimaryWeaponItem "VME_QBZ95_laser_IR_flashlight";
+_this addPrimaryWeaponItem "VME_Eotech_557_Magnifier_DOWN";
+_this addPrimaryWeaponItem "VME_rail_scopes";
+_this addWeapon "vme_pla_qsw06";
+_this addHandgunItem "VME_QSW06_Silencer";
+_this addWeapon "Binocular";
+
+comment "Add items";
+_this linkItem "ItemMap";
+_this linkItem "ItemCompass";
+_this linkItem "ItemWatch";
+_this linkItem "TFAR_anprc148jem";
+_this linkItem "ItemGPS";
+_this linkItem "NVGoggles_OPFOR";
+
+comment "Set identity";
+_this setFace "AsianHead_A3_02";
+_this setSpeaker "male02chi";
